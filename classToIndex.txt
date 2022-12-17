@@ -1,0 +1,6 @@
+female_Black 0
+female_East Asian 1
+female_White 2
+male_Black 3
+male_East Asian 4
+male_White 5

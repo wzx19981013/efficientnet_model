@@ -1,0 +1,39 @@
+技术报告：
+安装efficientnet_pytorch包，train.py文件开始训练
+参数设置：
+data_dir = 'data'   文件夹路径，不用改
+batch_size = 16  根据电脑性能调整
+lr = 0.01   学习率
+momentum = 0.9   optim.SGD的参数
+num_epochs = 5  训练轮数
+input_size = 224   图片大小
+class_num = 6   总分类数
+net_name = 'efficientnet-b0'   预训练模型b0-b7可替换，提前下载到weights文件夹中
+
+训练得到的best_model以预训练的模型名字保存在model文件夹中，如需修改保存名
+在代码：
+    model_out_path = save_dir + "/" + net_name + '.pth'
+    torch.save(model_ft, model_out_path)
+中修改out_path
+
+训练的epoch和acc保存在csv文件中
+
+
+
+
+测试：
+参数与训练程序保持一致，模型导入为训练得到的最好模型
+图片名与原始label，及预测的label保存在csv文件中
+
+
+数据集以及权重文件为：
+通过百度网盘分享的文件：efficien....pth等7个文件
+链接：https://pan.baidu.com/s/1y_uaDAB7lG255YdiDgvfvA 
+提取码：76Qb 
+复制这段内容打开「百度网盘APP 即可获取」
+
+
+通过百度网盘分享的文件：efficien....zip
+链接：https://pan.baidu.com/s/19vVrku0F4cxfdrLFsh3I3A 
+提取码：RAN6 
+复制这段内容打开「百度网盘APP 即可获取」
